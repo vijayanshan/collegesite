@@ -1,0 +1,142 @@
+/* Global Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f9fc;
+}
+
+/* Wrapper for background scope */
+.offline-page-wrapper {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  z-index: 0;
+}
+
+/* Background Image Layer */
+.offline-bg-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-image: url('/src/components/assets/offlineformbg.jpg'); /* Make sure image exists */
+  background-size: cover;
+  background-position: center;
+  opacity:100;
+  pointer-events: none;
+}
+
+/* Top Header */
+.top-header {
+  background-color: #002147dd;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.top-header h1 {
+  margin: 0;
+  font-size: 36px;
+  letter-spacing: 1px;
+}
+
+.top-header h2 {
+  margin-top: 10px;
+  font-weight: normal;
+  font-size: 22px;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Form Section */
+.form-section {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  opacity:100;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+  color: #002147;
+  margin-bottom: 15px;
+}
+
+/* Download Link */
+.download-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #d32f2f;
+  font-weight: bold;
+  background: #fefefe;
+  transition: background 0.3s;
+}
+
+.download-link img {
+  width: 22px;
+  margin-right: 8px;
+}
+
+.download-link:hover {
+  background: #fff2f2;
+}
+
+/* Back Link */
+.back-link {
+  display: block;
+  text-align: center;
+  margin: 30px auto 0;
+  text-decoration: none;
+  font-weight: bold;
+  color: #002147;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.bottom-bar {
+  background-color: #002147;
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+.back-link {
+  display: inline-flex;
+  justify-content: right;
+  align-items: center;
+  margin: 30px auto 0;
+  padding: 12px 20px;
+  border-radius: 30px; /* Rounded button */
+  background-color: #d3dde797;
+  box-shadow: 010px 12px rgba(203, 160, 49, 0.15);
+  text-decoration: none;
+  transition: background 0.3s;
+
+}
+
+.back-link img {
+  width: 70px;         /* Adjust icon size */
+  height: 18px;
+}
+
+.back-link:hover {
+  background-color: #cf820f;
+  transform: scale(1.05);
+}

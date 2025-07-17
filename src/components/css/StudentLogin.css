@@ -1,0 +1,127 @@
+/* === Full Page Background === */
+.leave-bg {
+  min-height: 100vh;
+  background-image: url('/src/components/assets/background/campus.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+}
+
+/* === Glassy / Card Form Container === */
+.form-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* === Heading === */
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 26px;
+  color: #2a3f54;
+}
+
+/* === Form Layout === */
+.leave-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.leave-form input,
+.leave-form select {
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+.leave-form input:focus,
+.leave-form select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* === Submit Button === */
+.leave-form button {
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.leave-form button:hover {
+  background-color: #0056b3;
+}
+
+/* === Success/Error Message === */
+.message {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: #2e7d32;
+}
+.message::before {
+  content: "📩 ";
+}
+
+/* === Spinner Overlay === */
+.spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* === Spinner Animation === */
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #007bff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .form-container {
+    padding: 20px;
+  }
+
+  .form-container h2 {
+    font-size: 22px;
+  }
+
+  .leave-form button {
+    font-size: 15px;
+  }
+}

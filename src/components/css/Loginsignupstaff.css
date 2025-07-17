@@ -1,0 +1,101 @@
+/* LoginFormstaff.css */
+
+/* Page background with image */
+.login-bg-staff {
+  min-height: 100vh;
+  background-image: url('/src/components/assets/background/library.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form container */
+.staff-login-form {
+  max-width: 400px;
+  width: 90%;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.3); /* glass effect */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(4px);
+}
+
+/* Heading */
+.staff-login-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+/* Input group */
+.input-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 6px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Password toggle */
+.password-wrapper {
+  position: relative;
+}
+
+.eye-button {
+  position: absolute;
+  top: 42%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+/* Forgot Password link */
+.forgot-link {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.forgot-link a {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Submit button */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}

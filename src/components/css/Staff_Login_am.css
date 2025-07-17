@@ -1,0 +1,180 @@
+/* === LeaveApprovalDashboard Scoped Styles === */
+.leave-approval-page {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+  color: #2c3e50;
+  min-height: 100vh;
+}
+
+/* === Header === */
+.leave-approval-page header {
+  background-color: #1f3c88;
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.leave-approval-page header h1 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.leave-approval-page header h2 {
+  font-size: 18px;
+  margin-top: 8px;
+  font-weight: 400;
+}
+
+/* === Top Navigation === */
+.leave-approval-page .top-navbar {
+  background-color: #3251a8;
+  padding: 10px 20px;
+}
+
+.leave-approval-page .top-nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.leave-approval-page .top-nav-links li {
+  margin-right: 15px;
+}
+
+.leave-approval-page .nav-button {
+  background-color: #ffffff;
+  color: #3251a8;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.leave-approval-page .nav-button:hover {
+  background-color: #f0f4ff;
+}
+
+/* === Input Area === */
+.leave-approval-page input[type="text"],
+.leave-approval-page input[type="date"] {
+  margin: 8px;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 200px;
+  max-width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+.leave-approval-page input[type="text"]:focus,
+.leave-approval-page input[type="date"]:focus {
+  border-color: #1f3c88;
+  outline: none;
+}
+
+/* === Table Styles === */
+.leave-approval-page .table-container {
+  overflow-x: auto;
+  padding: 20px;
+}
+
+.leave-approval-page table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.leave-approval-page th,
+.leave-approval-page td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.leave-approval-page th {
+  background-color: #f7f9fc;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.leave-approval-page tr:hover {
+  background-color: #f2f7ff;
+}
+
+.leave-approval-page td span.status {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* === Status Colors === */
+.leave-approval-page .status.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.leave-approval-page .status.approved {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.leave-approval-page .status.rejected {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* === Action Buttons === */
+.leave-approval-page .action-buttons button {
+  padding: 8px 12px;
+  margin-right: 8px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.leave-approval-page .action-buttons button:first-child {
+  background-color: #28a745;
+  color: white;
+}
+
+.leave-approval-page .action-buttons button:first-child:hover {
+  background-color: #218838;
+}
+
+.leave-approval-page .action-buttons button:last-child {
+  background-color: #dc3545;
+  color: white;
+}
+
+.leave-approval-page .action-buttons button:last-child:hover {
+  background-color: #c82333;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .leave-approval-page th,
+  .leave-approval-page td {
+    padding: 10px;
+  }
+
+  .leave-approval-page input[type="text"],
+  .leave-approval-page input[type="date"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .leave-approval-page .top-nav-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
