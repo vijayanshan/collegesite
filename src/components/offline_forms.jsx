@@ -1,8 +1,6 @@
-// src/components/OfflineForms.jsx
 import React from "react";
 import '../components/css/offline_forms.css';
 import pdfIcon from '../components/assets/pdf-icon.png';
-
 
 const OfflineForms = () => {
   return (
@@ -20,15 +18,15 @@ const OfflineForms = () => {
       <div className="container">
         <div className="form-section">
           <h2>Staff - Leave Application</h2>
-          <a className="download-link" href="" download>
+          <a className="download-link" href="/pdf forms/Staff Leave Form.pdf" download>
             <img src={pdfIcon} alt="PDF Icon" />
-            Leave Application - Click here to download
+            Staff Leave Form - Click here to download
           </a>
         </div>
 
         <div className="form-section">
           <h2>Students - Leave Application</h2>
-          <a className="download-link" href="/public/pdf forms/Leave Application Form - Students.pdf" download>
+          <a className="download-link" href="/pdf forms/Leave Application Form - Students.pdf" download>
             <img src={pdfIcon} alt="PDF Icon" />
             Leave Application - Click here to download
           </a>

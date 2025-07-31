@@ -30,7 +30,7 @@ const App = () => {
         <Route path="/LoginForm" element={<LoginForm />} />
         <Route path="/LoginFormstaff" element={<LoginFormstaff />} />
         <Route path="/LoginFormstaff/LeaveApprovalDashboard" element={<LeaveApprovalDashboard />} />
-        <Route path="/LoginFormstaff/LeaveApprovalDashboard/LeaveHistory" element={<LeaveHistory />} />
+        <Route path="/LeaveHistory" element={<LeaveHistory />} />
         <Route path="/LoginForm/LeaveForm" element={<LeaveForm />} />
         <Route path="/OfflineForms" element={<OfflineForms />} />
         <Route path="/LoginForm/ForgotPassword" element={<ForgotPassword />} />

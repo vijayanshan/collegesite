@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '../components/css/homepage.css';
+import AOS from "aos";
 import bodybg from '../components/assets/bodybg.jpg';
 import bg1 from '../components/assets/bg1.jpeg';
 import bg2 from '../components/assets/bg2.jpg';
@@ -14,11 +15,9 @@ import prefooterimage from '../components/assets/download.jpeg';
 import student_icon from '../components/assets/student_icon.png';
 import staff_icon from '../components/assets/staff_icon.png';
 import header_icon from '../components/assets/header_icon.png';
-import OfflineForms from "../components/offline_forms";
-import SportsPersonPage from"../components/sport";  
+
 import { useNavigate } from 'react-router-dom';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube, FaInstagram } from "react-icons/fa";
-
 import CountUp from 'react-countup';
 import {
   FaGraduationCap,
@@ -35,6 +34,7 @@ import chairmanImage from "../components/assets/faculty/chairman.jpg";
 import treasurerImage from "../components/assets/faculty/treasurer.jpg";
 import dean from "../components/assets/faculty/dean.jpg"
 
+
 const HomePage = () => {
   const navigate = useNavigate();
   const statsRef = useRef(null);
@@ -47,6 +47,7 @@ const HomePage = () => {
   const handleStaffLogin = () => navigate('/LoginFormstaff');
   const handleStudentLogin = () => navigate('/LoginForm');
   const handleOfflineForms = () => navigate('/offline_forms')
+  const handleLeaveHistory = ()=> navigate('/Leavehistory')
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -68,6 +69,9 @@ const HomePage = () => {
     }, 4000);
     return () => clearInterval(interval);
   }, []);
+useEffect(() => {
+  AOS.init({ duration: 1000 });
+}, []);
 
   useEffect(() => {
     if (legacySliderRef.current) {
@@ -165,6 +169,7 @@ const HomePage = () => {
           <a href="#Programmes-Offered">Programmes Offered</a>
           <a href="OfflineForms">Offline Leave Forms</a>
           <a href="#contact-section">Contact</a>
+          <a href="LeaveHistory">Leave History</a>
 
         </div>
       </div>
@@ -208,13 +213,14 @@ const HomePage = () => {
           <button className="login-btn student-btn" onClick={handleStudentLogin}>
             <img src={student_icon} alt="Student Icon" />
           </button>
-          <div className="login-label">STUDENT LOGIN</div>
+          <div className="login-label" style={{ color: 'white' }}>STUDENT LOGIN</div>
         </div>
         <div className="login-box">
           <button className="login-btn staff-btn" onClick={handleStaffLogin}>
             <img src={staff_icon} alt="Staff Icon" />
           </button>
-          <div className="login-label">STAFF LOGIN</div>
+        <div className="login-label" style={{ color: 'white' }}>STAFF LOGIN</div>
+
         </div>
       </div>
 
